@@ -1,0 +1,3 @@
+[submodule "Grug3D/vendor/spdlog"]
+	path = Grug3D/vendor/spdlog
+	url = https://github.com/gabime/spdlog
