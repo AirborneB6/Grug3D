@@ -9,5 +9,6 @@
 
 #else
 	#error Grug only uses Windows!
-
 #endif // GRUG_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

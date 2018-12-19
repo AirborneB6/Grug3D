@@ -1,15 +1,17 @@
 #pragma once
 
 #include "Core.h"
-#include <memory>
-#include "spdlog\spdlog.h"
-#include "spdlog\sinks\stdout_color_sinks.h"
+
+#include "spdlog/spdlog.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Grug3D
 {
 	class GRUG_API Log
 	{
 	public:
+
 		Log();
 		~Log();
 
@@ -19,9 +21,9 @@ namespace Grug3D
 		inline static std::shared_ptr<spdlog::logger>& getClientLogger() { return s_ClientLogger; }
 
 	private:
+
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;
-
 
 	};
 }
@@ -39,10 +41,3 @@ namespace Grug3D
 #define GRUG_INFO(...)		::Grug3D::Log::getClientLogger()->info(__VA_ARGS__)
 #define GRUG_TRACE(...)		::Grug3D::Log::getClientLogger()->trace(__VA_ARGS__)
 #define GRUG_FATAL(...)		::Grug3D::Log::getClientLogger()->fatal(__VA_ARGS__)
-
-
-
-
-
-
-

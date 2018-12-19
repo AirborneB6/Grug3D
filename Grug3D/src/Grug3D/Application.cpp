@@ -1,5 +1,8 @@
+#include "grugpch.h"
+
 #include "Application.h"
 
+#include "Events/ApplicationEvent.h"
 
 namespace Grug3D
 {
@@ -14,6 +17,9 @@ namespace Grug3D
 
 	void Application::run()
 	{
+		WindowResizeEvent event(1200, 800);
+		GRUG_TRACE(event);
+
 		while (true);
 	}
 }

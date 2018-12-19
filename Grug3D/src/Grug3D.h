@@ -1,9 +1,8 @@
 #pragma once
 //For use by Grug3D applications.
 
-//EXTERNAL LIBRARIES
-#include <stdio.h>
-
+//PRE-COMPILED HEADER
+#include "grugpch.h"
 
 //INHERITABLE APPLICATION
 #include "Grug3D/Application.h"

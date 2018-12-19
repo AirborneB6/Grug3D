@@ -1,3 +1,5 @@
+#include "grugpch.h"
+
 #include "Log.h"
 
 namespace Grug3D

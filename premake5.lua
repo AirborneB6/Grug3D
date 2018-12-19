@@ -13,6 +13,9 @@ project "Grug3D"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "grugpch.h"
+    pchsource "Grug3D/src/grugpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -21,6 +24,7 @@ project "Grug3D"
 
     includedirs
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
